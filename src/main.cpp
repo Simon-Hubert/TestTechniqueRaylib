@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     {
         BeginDrawing();
         ClearBackground(BLACK);
-        DrawText("Hello Raylib", 200,200,20,WHITE);
+        DrawText("Hello Showmielle", 200,200,20,WHITE);
         EndDrawing();
     }
     
