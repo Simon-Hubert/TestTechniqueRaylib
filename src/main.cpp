@@ -1,18 +1,21 @@
+#include "Window.h"
 #include "raylib.h"
+#include "Game.h"
 
 int main(int argc, char** argv) {
     SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
-    InitWindow(800, 600, "Hello Raylib");
+    LilShip::Window window(800, 600, "Hello Showmielle");
+    LilShip::Game game;
 
     while (!WindowShouldClose())
     {
+        game.Update(GetFrameTime());
+
         BeginDrawing();
         ClearBackground(BLACK);
-        DrawText("Hello Showmielle", 200,200,20,WHITE);
+        game.Draw();
         EndDrawing();
     }
-    
-    CloseWindow();
     
     return 0;
 }
