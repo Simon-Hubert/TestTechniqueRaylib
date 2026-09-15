@@ -6,7 +6,7 @@
 
 namespace LilShip {
 
-    class Game {
+    class Game : public IUpdatable, public IDrawable {
         public:
             Game();
             Game(const Game&) = delete;
@@ -15,9 +15,14 @@ namespace LilShip {
             
             Game& operator=(const Game&) = delete;
             Game& operator=(Game&&) = default;
+        
+            void Draw() const override;
+            void Update(float deltaTime) override;
 
         private:
             std::unique_ptr<Ship> ship;
             ProjectilePool projectilePool;
+            int scrolling = 0;
+            std::shared_ptr<const Texture> scrollTexture;
     };
 }

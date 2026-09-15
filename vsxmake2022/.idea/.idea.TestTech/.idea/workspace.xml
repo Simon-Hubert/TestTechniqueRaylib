@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6253eb8a-6a96-4503-af36-8b50c11abb5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../include/AGun.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/AGun.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../include/Math.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../include/Projectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/Projectile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../include/ProjectilePool.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/ProjectilePool.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../include/Ship.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/Ship.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/AGun.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/AGun.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/DrawRegistry.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/DrawRegistry.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Projectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Projectile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/ProjectilePool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/ProjectilePool.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Ship.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Ship.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTech/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/TestTech/v17/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/TestTech/v17/Browse.VC.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/TestTech/v17/ipch/AutoPCH/3f246907fc064a35/MAIN.ipch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTech.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TestTech.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTech/TestTech.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestTech/TestTech.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTech/TestTech.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/TestTech/TestTech.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTech/TestTech.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTech/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTech/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1789503134508</updated>
       <workItem from="1789503137705" duration="419000" />
-      <workItem from="1789503681424" duration="2477000" />
+      <workItem from="1789503681424" duration="3859000" />
     </task>
     <servers />
   </component>
