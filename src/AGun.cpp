@@ -18,7 +18,7 @@ namespace LilShip{
         UpdateRegistry::Instance().UnRegisterUpdatable(this);
     }
 
-    void AGun::Fire(const Vector2& position){
+    void AGun::Fire(Vector2 position){
         if(canShoot){
             Shoot(position);
             canShoot = false;
@@ -33,9 +33,9 @@ namespace LilShip{
         }
     }
 
-    void AGun::Shoot(const Vector2& position){
+    void AGun::Shoot(Vector2 position){
         std::cout << "Shoot" << std::endl;
-        std::shared_ptr<Projectile> proj = ProjectilePool::Instance().GetProjectile({projTexture, 40.f, 1});
+        std::shared_ptr<Projectile> proj = ProjectilePool::Instance().GetProjectile({projTexture, 400.f, 1});
         proj->Init(position, {1,0});
     }
 }

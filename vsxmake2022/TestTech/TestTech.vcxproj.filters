@@ -38,10 +38,25 @@ xmake version 3.0.4+HEAD.347e268f3
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(XmakeProjectDir)\include\AGun.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\DrawRegistry.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\FMath.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="$(XmakeProjectDir)\include\Game.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="$(XmakeProjectDir)\include\InputManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\Projectile.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\ProjectilePool.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="$(XmakeProjectDir)\include\Ship.h">
@@ -53,6 +68,9 @@ xmake version 3.0.4+HEAD.347e268f3
     <ClInclude Include="$(XmakeProjectDir)\include\Texture.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\UpdateRegistry.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="$(XmakeProjectDir)\include\Window.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -61,10 +79,22 @@ xmake version 3.0.4+HEAD.347e268f3
   </ItemGroup>
   <ItemGroup>
 
+    <ClCompile Include="$(XmakeProjectDir)\src\AGun.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\DrawRegistry.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Game.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\InputManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Projectile.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\ProjectilePool.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Ship.cpp">
@@ -74,6 +104,9 @@ xmake version 3.0.4+HEAD.347e268f3
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\UpdateRegistry.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Window.cpp">

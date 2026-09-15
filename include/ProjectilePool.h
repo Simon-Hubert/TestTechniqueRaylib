@@ -19,7 +19,7 @@ namespace LilShip{
 
             static ProjectilePool& Instance();
 
-            std::shared_ptr<Projectile> GetProjectile(ProjectileData projectileData);
+            std::shared_ptr<Projectile> GetProjectile(const ProjectileData& projectileData);
             void ReturnProjectile(std::shared_ptr<Projectile> projectile);
 
         private:

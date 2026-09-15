@@ -26,15 +26,16 @@ namespace LilShip {
             Ship& operator=(const Ship&) = delete;
             Ship& operator=(Ship&&) = default;
         
+        
         private:
-            Vector2 position;
-            float rotation = 0.f;
-            float scale = 1.f;
-            float maxSpeed;
+            Vector2 _position;
+            float _rotation = 0.f;
+            float _scale = 1.f;
+            float _maxSpeed;
             
-            Vector2 inputs = {0,0};
+            Vector2 _inputs = {0,0};
 
-            Vector2 speed = {0,0};
+            Vector2 _speed = {0,0};
 
             std::unique_ptr<Sprite> sprite;
 

@@ -4,7 +4,7 @@
 #include "raylib.h"
 #include <Projectile.h>
 #include <iostream>
-#include "Math.h"
+#include "FMath.h"
 
 namespace LilShip{
     Projectile::Projectile():
@@ -21,9 +21,10 @@ namespace LilShip{
         UpdateRegistry::Instance().UnRegisterUpdatable(this);
     }
 
-    void Projectile::SetData(ProjectileData projectileData, std::shared_ptr<Projectile> ownPointer){
+    void Projectile::SetData(const ProjectileData& projectileData, const std::shared_ptr<Projectile>& ownPointer){
         sprite.ChangeTexture(projectileData.texture);
         speed = projectileData.speed;
+        self = ownPointer;
         damages = projectileData.damages;
         std::cout << "Projectile SetData" << std::endl;   
     }
@@ -40,17 +41,14 @@ namespace LilShip{
     }
 
     void Projectile::Draw() const{
-        std::cout << "Projectile Drawn" << std::endl;
-
         if(!isActive) return;
         sprite.Draw(position, 0, 1);
     }
 
     void Projectile::Update(float deltaTime){
-        std::cout << "Projectile Updated" << std::endl;
-
         if(!isActive) return;
         position += direction * speed * deltaTime;
+        if(position.x >= 850.f) Destroy();
     }
 
     void Projectile::Destroy(){

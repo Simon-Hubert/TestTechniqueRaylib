@@ -29,14 +29,14 @@ namespace LilShip{
             void Draw() const override;
             void Update(float deltaTime) override;
 
-            void SetData(ProjectileData projectileData, std::shared_ptr<Projectile> ownPointer);
+            void SetData(const ProjectileData& projectileData, const std::shared_ptr<Projectile>& ownPointer);
             void Init(Vector2 newPosition, Vector2 newDirection);
             void Reset();
 
         private:
             Vector2 position;
             Vector2 direction;
-            float rotation;
+            float rotation = 0;
             float speed;
             int damages;
             bool isActive = false;

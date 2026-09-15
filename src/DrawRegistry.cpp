@@ -28,7 +28,7 @@ namespace LilShip{
 
     void DrawRegistry::UnRegisterDrawable(IDrawable* drawable)
     {
-        drawables.erase(std::find(drawables.begin(), drawables.end(), drawable));
+        drawables.erase(std::ranges::find(drawables, drawable));
     }
 
      DrawRegistry& DrawRegistry::Instance() {

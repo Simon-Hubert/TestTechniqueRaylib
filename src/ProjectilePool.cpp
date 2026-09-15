@@ -25,7 +25,7 @@ namespace LilShip{
 
     ProjectilePool* ProjectilePool::instance = nullptr;
 
-    std::shared_ptr<Projectile> ProjectilePool::GetProjectile(ProjectileData projectileData){
+    std::shared_ptr<Projectile> ProjectilePool::GetProjectile(const ProjectileData& projectileData){
         if(!projectilePool.empty()){
             std::shared_ptr<Projectile> proj = projectilePool.back();
             projectilePool.pop_back();

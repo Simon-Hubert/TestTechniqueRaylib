@@ -108,21 +108,39 @@ xmake version 3.0.4+HEAD.347e268f3
 
   <Import Project="$(XmakeProgramDir)\scripts\vsxmake\vsproj\Xmake.props" />
   <ItemGroup>
+    <ClInclude Include="$(XmakeProjectDir)\include\AGun.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\DrawRegistry.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\FMath.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Game.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\InputManager.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\Projectile.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\ProjectilePool.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Ship.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Sprite.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Texture.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\UpdateRegistry.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Window.h" />
 
 
   </ItemGroup>
   <ItemGroup>
 
+    <ClCompile Include="$(XmakeProjectDir)\src\AGun.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\DrawRegistry.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Game.cpp">
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\InputManager.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Projectile.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\ProjectilePool.cpp">
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Ship.cpp">
@@ -132,6 +150,9 @@ xmake version 3.0.4+HEAD.347e268f3
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Texture.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\UpdateRegistry.cpp">
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Window.cpp">
