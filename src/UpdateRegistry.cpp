@@ -1,6 +1,7 @@
 #include <UpdateRegistry.h>
 #include <algorithm>
 #include <stdexcept>
+#include <iostream>
 
 namespace LilShip{
     UpdateRegistry::UpdateRegistry() {
@@ -31,7 +32,7 @@ namespace LilShip{
         updatables.erase(std::find(updatables.begin(), updatables.end(), updatable));
     }
 
-     UpdateRegistry& UpdateRegistry::Instance() {
+    UpdateRegistry& UpdateRegistry::Instance() {
         if(!instance) {
             throw std::runtime_error("UpdateRegistry hasn't been instanced");
         }

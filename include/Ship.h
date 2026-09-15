@@ -1,5 +1,6 @@
 #pragma once
 
+#include "AGun.h"
 #include "DrawRegistry.h"
 #include "Sprite.h"
 #include "UpdateRegistry.h"
@@ -39,6 +40,7 @@ namespace LilShip {
 
             void Draw() const override;
             void Update(float deltaTime) override;
-            
+
+            std::unique_ptr<AGun> gun;            
     };
 }

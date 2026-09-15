@@ -1,16 +1,19 @@
 #include "Ship.h"
 #include <memory>
 
+#include "AGun.h"
 #include "InputManager.h"
 #include "Math.h"
 #include "UpdateRegistry.h"
+#include "raylib.h"
 
 namespace LilShip {
     
     Ship::Ship(Vector2 position, float maxSpeed, std::shared_ptr<const Texture> texture):
     sprite(std::make_unique<Sprite>(texture)),
     position(position),
-    maxSpeed(maxSpeed)
+    maxSpeed(maxSpeed),
+    gun(std::make_unique<AGun>())
     {
         InputManager::Instance().BindKey(KEY_UP, "Up");
         InputManager::Instance().BindAction("Up", [&](KeyState state)
@@ -35,6 +38,14 @@ namespace LilShip {
         {
             if(state == PRESSED) inputs.x += 1;
             if(state == RELEASED) inputs.x -= 1;
+        });
+
+        InputManager::Instance().BindKey(KEY_SPACE, "Shoot");
+        InputManager::Instance().BindAction("Shoot", [&](KeyState state)
+        {
+            if (state == PERFORMED) {
+                gun->Fire(position);
+            }
         });
 
         DrawRegistry::Instance().RegisterDrawable(this);

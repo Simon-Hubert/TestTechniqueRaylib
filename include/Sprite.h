@@ -19,10 +19,12 @@ namespace LilShip{
             Sprite& operator=(Sprite&&) = delete;
             
             void Draw(Vector2 position, float rotation, float scale) const;
+            void ChangeTexture(std::shared_ptr<const Texture> texture);
+            void ChangeTexture(std::shared_ptr<const Texture> texture, Vector2 size);
 
         private:
-            Vector2 size;
-            std::shared_ptr<const Texture> texture;
+            Vector2 _size;
+            std::shared_ptr<const Texture> _texture;
     };
 }
 

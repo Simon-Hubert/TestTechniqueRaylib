@@ -1,5 +1,6 @@
 #pragma once
 
+#include "ProjectilePool.h"
 #include "Ship.h"
 #include <memory>
 
@@ -11,11 +12,12 @@ namespace LilShip {
             Game(const Game&) = delete;
             Game(Game&&) noexcept = default;
             ~Game();
+            
             Game& operator=(const Game&) = delete;
             Game& operator=(Game&&) = default;
 
         private:
             std::unique_ptr<Ship> ship;
-
+            ProjectilePool projectilePool;
     };
 }
