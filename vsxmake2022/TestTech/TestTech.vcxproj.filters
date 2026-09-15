@@ -12,6 +12,9 @@ xmake version 3.0.4+HEAD.347e268f3
     <Filter Include="Properties">
       <UniqueIdentifier>{CC7C6180-942D-056E-3227-E6A2B3FB19CD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{04CCF0D3-2EF0-416E-960B-AE7879D46B6B}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{491FBF00-292E-479F-8C8F-7A2AC045023A}</UniqueIdentifier>
     </Filter>
@@ -35,11 +38,47 @@ xmake version 3.0.4+HEAD.347e268f3
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(XmakeProjectDir)\include\Game.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\InputManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\Ship.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\Sprite.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\Texture.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\Window.h">
+      <Filter>include</Filter>
+    </ClInclude>
 
 
   </ItemGroup>
   <ItemGroup>
 
+    <ClCompile Include="$(XmakeProjectDir)\src\Game.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\InputManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Ship.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Sprite.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Window.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>

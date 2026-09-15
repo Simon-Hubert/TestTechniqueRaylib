@@ -13,7 +13,7 @@ namespace LilShip{
     texture(std::move(texture))
     { }
 
-    void Sprite::Draw(Vector2 position, float rotation, Vector2 scale) const{
-        texture->Draw(position, rotation, scale.x);
+    void Sprite::Draw(Vector2 position, float rotation, float scale) const{
+        texture->Draw(position, rotation, scale);
     }
 }
