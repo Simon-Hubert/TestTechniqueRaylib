@@ -14,12 +14,8 @@ namespace LilShip {
             Game& operator=(const Game&) = delete;
             Game& operator=(Game&&) = default;
 
-            void Update(float deltaTime);
-            void Draw();
-
         private:
             std::unique_ptr<Ship> ship;
-            Texture2D shipTex;
 
     };
 }

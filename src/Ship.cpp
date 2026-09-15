@@ -2,13 +2,15 @@
 #include <memory>
 
 #include "InputManager.h"
-#include <iostream>
+#include "Math.h"
+#include "UpdateRegistry.h"
 
 namespace LilShip {
-    Ship::Ship(std::shared_ptr<const Texture> texture):
+    
+    Ship::Ship(Vector2 position, float maxSpeed, std::shared_ptr<const Texture> texture):
     sprite(std::make_unique<Sprite>(texture)),
-    position({200.f, 200.f}),
-    scale(2)
+    position(position),
+    maxSpeed(maxSpeed)
     {
         InputManager::Instance().BindKey(KEY_UP, "Up");
         InputManager::Instance().BindAction("Up", [&](KeyState state)
@@ -34,15 +36,29 @@ namespace LilShip {
             if(state == PRESSED) inputs.x += 1;
             if(state == RELEASED) inputs.x -= 1;
         });
+
+        DrawRegistry::Instance().RegisterDrawable(this);
+        UpdateRegistry::Instance().RegisterUpdatable(this);
+    }
+
+    Ship::Ship(std::shared_ptr<const Texture> texture):
+    Ship({0,0}, 5, texture)
+    {   }
+
+    Ship::~Ship(){
+        DrawRegistry::Instance().UnRegisterDrawable(this);
+        UpdateRegistry::Instance().UnRegisterUpdatable(this);
     }
 
     void Ship::Update(float deltaTime)
     {
-        position.x += inputs.x;
-        position.y += inputs.y;
+        speed += inputs * maxSpeed;
+        speed -= speed * 0.1f;
+        
+        position += speed * deltaTime;
     }
 
-    void Ship::Draw()
+    void Ship::Draw() const
     {
         sprite->Draw(position, rotation, scale);
     }
