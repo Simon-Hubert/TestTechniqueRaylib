@@ -18,7 +18,7 @@ namespace LilShip{
             Sprite& operator=(const Sprite&) = delete;
             Sprite& operator=(Sprite&&) = delete;
             
-            void Draw(Vector2 position, float rotation, Vector2 scale) const;
+            void Draw(Vector2 position, float rotation, float scale) const;
 
         private:
             Vector2 size;

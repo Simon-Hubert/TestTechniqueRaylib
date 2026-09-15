@@ -6,6 +6,7 @@ add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 add_includedirs("include")
 add_installfiles("(resource/**)", {prefixdir = "bin"})
 set_rundir("$(projectdir)")
+set_languages("c++20")
 
 
 target("TestTech")
