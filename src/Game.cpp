@@ -24,6 +24,7 @@ namespace LilShip {
     {
         scrollTexture->Draw({(float)scrolling, 0}, 0, 4);
         scrollTexture->Draw({(float)scrolling + scrollTexture->GetSize().x * 4, 0}, 0, 4);
+        DrawText(std::to_string(score.Get()).c_str(),400, 75, 20, WHITE);
     }
 
     void Game::Update(float deltaTime)

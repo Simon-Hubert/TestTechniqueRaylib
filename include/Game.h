@@ -5,6 +5,7 @@
 #include <memory>
 
 #include "EnemyPool.h"
+#include "Score.h"
 
 namespace LilShip {
 
@@ -25,6 +26,7 @@ namespace LilShip {
             std::unique_ptr<Ship> ship;
             ProjectilePool projectilePool;
             std::unique_ptr<EnemyPool> enemyPool;
+            Score score;
             int scrolling = 0;
             std::shared_ptr<const Texture> scrollTexture;
     };

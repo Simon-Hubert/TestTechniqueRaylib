@@ -4,6 +4,7 @@
 #include "EnemyPool.h"
 #include "Sprite.h"
 #include "FMath.h"
+#include "Score.h"
 
 namespace LilShip{
 
@@ -54,6 +55,7 @@ namespace LilShip{
     {
         health -= damages;
         if(health <= 0) {
+            Score::Instance().Add(100);
             Death();
         }
     }
