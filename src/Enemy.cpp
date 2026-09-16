@@ -27,7 +27,7 @@ namespace LilShip{
     void Enemy::Draw() const
     {
         if(!active) return;
-        _sprite.Draw(position, 180, 1);
+        _sprite.Draw(position + size, 180, 1);
     }
 
     void Enemy::Update(float deltaTime)
@@ -46,7 +46,16 @@ namespace LilShip{
     void Enemy::Spawn(Vector2 newPosition)
     {
         position = newPosition;
+        health = 3;
         active = true;
+    }
+
+    void Enemy::TakeDamage(int damages)
+    {
+        health -= damages;
+        if(health <= 0) {
+            Death();
+        }
     }
 
     void Enemy::Death()

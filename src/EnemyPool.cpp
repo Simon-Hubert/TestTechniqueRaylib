@@ -29,17 +29,19 @@ namespace LilShip{
     EnemyPool* EnemyPool::instance = nullptr;
 
     std::shared_ptr<Enemy> EnemyPool::SpawnEnemy(){
+        Vector2 position = Vector2{850,(float)GetRandomValue(50, 500)};
+        
         if(!enemyPool.empty()){
             std::shared_ptr<Enemy> enemy = enemyPool.back();
             enemyPool.pop_back();
             activeEnemies.push_back(enemy);
-            enemy->Spawn({850, 300});
+            enemy->Spawn(position);
             return enemy;
         }
         else{
             std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(enemyTexture, nextId++);
             activeEnemies.push_back(enemy);
-            enemy->Spawn({850, 300});
+            enemy->Spawn(position);
             return enemy;
         }
     }
@@ -48,7 +50,7 @@ namespace LilShip{
     {
         if(cooldown < 0) {
             SpawnEnemy();
-            cooldown = 3.f;
+            cooldown = .5f;
         }
         cooldown -= deltaTime;
     }

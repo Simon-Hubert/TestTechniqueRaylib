@@ -29,6 +29,7 @@ namespace LilShip {
         
         private:
             Vector2 _position;
+            Vector2 _size;
             float _rotation = 0.f;
             float _scale = 1.f;
             float _maxSpeed;

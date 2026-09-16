@@ -10,7 +10,7 @@ namespace LilShip {
         UpdateRegistry::Instance().RegisterUpdatable(this);
         std::shared_ptr<const Texture> shipTexture = std::make_shared<const Texture>("resources/newAssetPack/000.png");
         scrollTexture = std::make_shared<const Texture>("resources/newAssetPack/Space Attempt 1_stars2.png");
-        ship = std::make_unique<Ship>(Vector2{200, 200}, 25.f, shipTexture);
+        ship = std::make_unique<Ship>(Vector2{200, 200}, 35.f, shipTexture);
         enemyPool = std::make_unique<EnemyPool>();
     }
 

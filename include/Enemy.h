@@ -31,6 +31,8 @@ namespace LilShip{
         
             void Spawn(Vector2 newPosition);
         
+            void TakeDamage(int damages);
+        
         
         private:
             Vector2 position;
@@ -38,6 +40,7 @@ namespace LilShip{
             void Death();
             bool active = false;
             Sprite _sprite;
+            int health = 3;
     };
 }
 

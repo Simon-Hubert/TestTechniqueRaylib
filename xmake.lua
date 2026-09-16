@@ -4,7 +4,7 @@ add_requires("raylib")
 add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 
 add_includedirs("include")
-add_installfiles("(resource/**)", {prefixdir = "bin"})
+add_installfiles("(resources/**)", {prefixdir = "bin"})
 set_rundir("$(projectdir)")
 set_languages("c++20")
 

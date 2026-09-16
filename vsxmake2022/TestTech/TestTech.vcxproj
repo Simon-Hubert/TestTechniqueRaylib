@@ -117,6 +117,7 @@ xmake version 3.0.4+HEAD.347e268f3
     <ClInclude Include="$(XmakeProjectDir)\include\InputManager.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Projectile.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\ProjectilePool.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\Score.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Ship.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Sprite.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Texture.h" />
@@ -149,6 +150,9 @@ xmake version 3.0.4+HEAD.347e268f3
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\ProjectilePool.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Score.cpp">
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Ship.cpp">

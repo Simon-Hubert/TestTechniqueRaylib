@@ -65,6 +65,9 @@ xmake version 3.0.4+HEAD.347e268f3
     <ClInclude Include="$(XmakeProjectDir)\include\ProjectilePool.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\Score.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="$(XmakeProjectDir)\include\Ship.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -107,6 +110,9 @@ xmake version 3.0.4+HEAD.347e268f3
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\ProjectilePool.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Score.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Ship.cpp">

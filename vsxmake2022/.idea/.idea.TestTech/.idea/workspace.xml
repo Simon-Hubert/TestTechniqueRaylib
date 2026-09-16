@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6253eb8a-6a96-4503-af36-8b50c11abb5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../include/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../include/Sprite.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/Sprite.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../include/UpdateRegistry.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/UpdateRegistry.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/Enemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/Enemy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/FMath.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/FMath.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/Ship.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/Ship.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Enemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Enemy.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/EnemyPool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/EnemyPool.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Sprite.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/UpdateRegistry.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/UpdateRegistry.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Projectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Projectile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Ship.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Ship.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTech/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTech/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTech/TestTech.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestTech/TestTech.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTech/TestTech.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/TestTech/TestTech.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xmake.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../xmake.lua" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://55" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://60" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
@@ -47,7 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "C/C++ Project.TestTech.executor": "Debug",
+    "C/C++ Project.TestTech.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -88,7 +89,7 @@
       <updated>1789503134508</updated>
       <workItem from="1789503137705" duration="419000" />
       <workItem from="1789503681424" duration="6859000" />
-      <workItem from="1789542878886" duration="5888000" />
+      <workItem from="1789542878886" duration="8615000" />
     </task>
     <servers />
   </component>

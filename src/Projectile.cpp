@@ -4,6 +4,8 @@
 #include "raylib.h"
 #include <Projectile.h>
 #include <iostream>
+
+#include "EnemyPool.h"
 #include "FMath.h"
 
 namespace LilShip{
@@ -49,6 +51,15 @@ namespace LilShip{
         if(!isActive) return;
         position += direction * speed * deltaTime;
         if(position.x >= 850.f) Destroy();
+        
+        //collisions
+        for(std::shared_ptr<Enemy> enemy: *EnemyPool::Instance().GetActiveEnemies()) {
+            if(!enemy)continue;
+            if(CheckCollisionCircleRec(position + Vector2{38,16}, 10, enemy->GetCollisionRect())) {
+                enemy->TakeDamage(damages);
+                Destroy();
+            }
+        }
     }
 
     void Projectile::Destroy(){

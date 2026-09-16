@@ -4,13 +4,15 @@
 #include <memory>
 
 #include "AGun.h"
+#include "EnemyPool.h"
 #include "InputManager.h"
 #include "FMath.h"
 #include "UpdateRegistry.h"
 #include "raylib.h"
 
 namespace LilShip {
-    
+    class Enemy;
+
     Ship::Ship(Vector2 position, float maxSpeed, std::shared_ptr<const Texture> texture):
     sprite(std::make_unique<Sprite>(texture)),
     _position(position),
@@ -52,6 +54,8 @@ namespace LilShip {
 
         DrawRegistry::Instance().RegisterDrawable(this);
         UpdateRegistry::Instance().RegisterUpdatable(this);
+        
+        _size = sprite->GetSize();
     }
 
     Ship::Ship(std::shared_ptr<const Texture> texture):
@@ -69,6 +73,15 @@ namespace LilShip {
         _speed -= _speed * 0.1f;
         
         _position += _speed * deltaTime;
+        
+        //collisions
+        for(std::shared_ptr<Enemy> enemy: *EnemyPool::Instance().GetActiveEnemies()) {
+            if(!enemy)continue;
+            if(CheckCollisionCircleRec(_position, 10, enemy->GetCollisionRect())) {
+                
+                //Logique on death
+            }
+        }
     }
 
     void Ship::Draw() const
