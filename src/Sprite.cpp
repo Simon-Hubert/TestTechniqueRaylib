@@ -27,4 +27,9 @@ namespace LilShip{
         _texture = std::move(texture);
         _size = size;
     }
+
+    Vector2 Sprite::GetSize() const
+    {
+        return _size;
+    }
 }

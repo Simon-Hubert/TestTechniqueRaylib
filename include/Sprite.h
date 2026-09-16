@@ -9,9 +9,9 @@ namespace LilShip{
     class Sprite
     {
         public:
-        Sprite(std::shared_ptr<const Texture> texture, Vector2 size);
-        Sprite(std::shared_ptr<const Texture> texture);
-        Sprite(const Sprite&) = delete;
+            Sprite(std::shared_ptr<const Texture> texture, Vector2 size);
+            Sprite(std::shared_ptr<const Texture> texture);
+            Sprite(const Sprite&) = delete;
             Sprite(Sprite&&) = delete;
             ~Sprite() = default;
 
@@ -22,6 +22,8 @@ namespace LilShip{
             void ChangeTexture(std::shared_ptr<const Texture> texture);
             void ChangeTexture(std::shared_ptr<const Texture> texture, Vector2 size);
 
+            Vector2 GetSize() const;
+            
         private:
             Vector2 _size;
             std::shared_ptr<const Texture> _texture;

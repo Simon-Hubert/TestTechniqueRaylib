@@ -110,6 +110,8 @@ xmake version 3.0.4+HEAD.347e268f3
   <ItemGroup>
     <ClInclude Include="$(XmakeProjectDir)\include\AGun.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\DrawRegistry.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\Enemy.h" />
+    <ClInclude Include="$(XmakeProjectDir)\include\EnemyPool.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\FMath.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\Game.h" />
     <ClInclude Include="$(XmakeProjectDir)\include\InputManager.h" />
@@ -129,6 +131,12 @@ xmake version 3.0.4+HEAD.347e268f3
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\DrawRegistry.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Enemy.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\EnemyPool.cpp">
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Game.cpp">

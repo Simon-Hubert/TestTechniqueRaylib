@@ -17,19 +17,37 @@ namespace LilShip{
 
     void UpdateRegistry::Update(float detlaTime)
     {
+        HandlePending();
+        
         for (IUpdatable* updatable : updatables) {
+            if(!updatable) continue;
             updatable->Update(detlaTime);
         }
     }
 
     void UpdateRegistry::RegisterUpdatable(IUpdatable* updatable)
     {
-        updatables.push_back(updatable);
+        pendingAdd.push(updatable);
+        //updatables.push_back(updatable);
     }
 
     void UpdateRegistry::UnRegisterUpdatable(IUpdatable* updatable)
     {
-        updatables.erase(std::find(updatables.begin(), updatables.end(), updatable));
+        pendingRemove.push(updatable);
+        //updatables.erase(std::find(updatables.begin(), updatables.end(), updatable));
+    }
+
+    void UpdateRegistry::HandlePending()
+    {
+        while(!pendingAdd.empty()) {
+            updatables.push_back(pendingAdd.front());
+            pendingAdd.pop();
+        }
+        
+        while(!pendingRemove.empty()) {
+            updatables.erase(std::find(updatables.begin(), updatables.end(), pendingRemove.front()));
+            pendingRemove.pop();
+        }
     }
 
     UpdateRegistry& UpdateRegistry::Instance() {

@@ -44,6 +44,12 @@ xmake version 3.0.4+HEAD.347e268f3
     <ClInclude Include="$(XmakeProjectDir)\include\DrawRegistry.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\Enemy.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(XmakeProjectDir)\include\EnemyPool.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="$(XmakeProjectDir)\include\FMath.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -83,6 +89,12 @@ xmake version 3.0.4+HEAD.347e268f3
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\DrawRegistry.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\Enemy.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(XmakeProjectDir)\src\EnemyPool.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="$(XmakeProjectDir)\src\Game.cpp">

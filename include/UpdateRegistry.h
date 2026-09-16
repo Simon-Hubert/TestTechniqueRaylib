@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <queue>
 
 namespace LilShip{
 
@@ -27,7 +28,11 @@ namespace LilShip{
             void UnRegisterUpdatable(IUpdatable* updatable);
 
         private:
+            void HandlePending();
+        
             std::vector<IUpdatable*> updatables;
+            std::queue<IUpdatable*> pendingAdd;
+            std::queue<IUpdatable*> pendingRemove;
             static UpdateRegistry* instance;
     };
 }

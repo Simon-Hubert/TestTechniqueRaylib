@@ -4,6 +4,8 @@
 #include "Ship.h"
 #include <memory>
 
+#include "EnemyPool.h"
+
 namespace LilShip {
 
     class Game : public IUpdatable, public IDrawable {
@@ -22,6 +24,7 @@ namespace LilShip {
         private:
             std::unique_ptr<Ship> ship;
             ProjectilePool projectilePool;
+            std::unique_ptr<EnemyPool> enemyPool;
             int scrolling = 0;
             std::shared_ptr<const Texture> scrollTexture;
     };
