@@ -29,7 +29,7 @@ namespace LilShip {
 
     void Game::Update(float deltaTime)
     {
-        scrolling -= 8;
+        scrolling -= (400 * deltaTime);
         if(scrolling <= -scrollTexture->GetSize().x * 4) scrolling = 0;
     }
 }

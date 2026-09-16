@@ -35,7 +35,7 @@ namespace LilShip{
     {
         if(!active) return;
         if(position.x < -50) Death();
-        position -= Vector2{8,0};
+        position -= Vector2{400* deltaTime,0};
         
     }
 
